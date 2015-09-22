@@ -1,0 +1,5 @@
+public/dist
+.divshot-cache
+divshot-debug.log
+node_modules
+bower_components

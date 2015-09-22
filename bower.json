@@ -1,0 +1,21 @@
+{
+  "name": "ghack",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dcslack/ghack",
+  "authors": [
+    "Dylan <dylanslack@gmail.com>"
+  ],
+  "description": "ghack.io",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0"
+  }
+}

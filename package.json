@@ -1,0 +1,32 @@
+{
+  "name": "ghack",
+  "version": "0.0.1",
+  "description": "ghack.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && node_modules/.bin/divshot push",
+    "deploy:staging": "npm run build && node_modules/.bin/divshot push staging",
+    "deploy:production": "npm run build && node_modules/.bin/divshot push production",
+    "build": "npm run build:scss && npm run build:js",
+    "build:scss": "node_modules/.bin/node-sass --output-style compressed assets/scss/main.scss -o public/dist/",
+    "build:js": "node_modules/.bin/babel assets/js/main.js -o public/dist/main.js && node_modules/.bin/uglifyjs public/dist/main.js -o public/dist/main.js",
+    "start": "node_modules/.bin/bowcat -m -o public/dist && npm run build && node_modules/.bin/ss --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcslack/ghack.git"
+  },
+  "author": "Dylan Slack <dylanslack@gmail.com> (http://www.dylanslack.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcslack/ghack/issues"
+  },
+  "homepage": "https://github.com/dcslack/ghack#readme",
+  "devDependencies": {
+    "bowcat": "0.0.5",
+    "divshot-cli": "^1.10.5",
+    "superstatic": "^2.2.1",
+    "uglify-js": "^2.4.24"
+  }
+}
