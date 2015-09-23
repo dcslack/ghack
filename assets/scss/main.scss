@@ -59,8 +59,21 @@ h1, h2, h3 {
   color: white;
   background: #333;
 
+  p {
+    a {
+      color: white;
+      font-weight: bold;
+    }
+  }
+
   h1 {
     font-size: 40px;
+  }
+
+  .about-hours {
+    h1 {
+      font-size: 70px;
+    }
   }
 }
 
